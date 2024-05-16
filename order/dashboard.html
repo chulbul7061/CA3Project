@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Food Order Dashboard</title>
+
+</head>
+<body>
+    <h1>Food Ordering Dashboard</h1>
+    <div  class="content">
+        <div>
+        <div>
+            <label for="search">Search:</label>
+            <input type="text" id="search" placeholder="Search for food...">
+        </div>
+
+        <div>
+            <label for="sort">Sort by:</label>
+            <select id="sort">
+                <option value="price">Price</option>
+                <option value="popularity">Popularity</option>
+            </select>
+        </div>
+
+        <div class="menu-container" id="menu-container">
+            <table id="menu_container"></table>
+        </div>
+        </div>
+
+        <div>
+        <div class="order-container" id="order_details">
+            <h2>Your Order Summary</h2>
+            <p><i>Enjoy the delicious authenticate food with us. Your total bill amount is</i></p>
+            <table id="order-list"></table>
+            <div id="total-amount">Total Amount: $0.00</div>
+            <button onclick="placeOrder()">Place Order</button>
+        </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+
+</body>
+</html>

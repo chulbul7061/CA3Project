@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodZone - Contact Us</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7; /* Background color for the entire page */
+    }
+
+    header {
+      background-color: #ff8c00; /* Header background color */
+      padding: 20px;
+      text-align: center;
+      color: #fff; /* Text color for header */
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #f0f0f0; /* Navigation background color */
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333; /* Link color */
+      font-weight: bold;
+      transition: color 0.3s ease; /* Smooth transition for link color change */
+    }
+
+    nav a:hover {
+      color: #ff8c00; /* Change link color on hover */
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    /* Contact Form Styling */
+    .contact-form {
+      background-color: #fff; /* Background color for contact form */
+      padding: 20px;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+      max-width: 600px; /* Limit width for better readability */
+      margin: 0 auto; /* Center the form */
+    }
+
+    .contact-form h2 {
+      color: #333; /* Heading color */
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    textarea {
+      height: 150px; /* Set height for textarea */
+    }
+
+    input[type="submit"] {
+      background-color: #ff8c00; /* Submit button background color */
+      color: #fff; /* Text color for submit button */
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Thank You Message Styling */
+    .thank-you {
+      background-color: #fff; /* Background color for thank you message */
+      padding: 20px;
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+      max-width: 600px; /* Limit width for better readability */
+      margin: 0 auto; /* Center the message */
+      display: none; /* Initially hidden */
+    }
+
+    .thank-you h2 {
+      color: #333; /* Heading color */
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .thank-you p {
+      color: #555; /* Text color */
+    }
+
+    /* Responsive Styling */
+    @media only screen and (max-width: 768px) {
+      .contact-form {
+        padding: 10px;
+      }
+      input[type="text"],
+      textarea,
+      input[type="submit"] {
+        width: calc(100% - 20px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>FoodZone</h1>
+  <p>Bringing Delicious Food to Your Doorstep</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li class="active"><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="contact-form">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+
+  <div class="thank-you" id="thankYouMessage">
+    <h2>Thank You!</h2>
+    <p>Your message has been successfully submitted. We will get back to you as soon as possible.</p>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2024 FoodZone. All Rights Reserved.</p>
+</footer>
+
+<script>
+  // Function to handle form submission
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    var form = event.target;
+    var formData = new FormData(form);
+    // Simulate form submission (you can replace this with actual form submission)
+    setTimeout(function() {
+      form.reset(); // Reset form fields
+      document.getElementById('thankYouMessage').style.display = 'block'; // Show thank you message
+      setTimeout(function() {
+        document.getElementById('thankYouMessage').style.display = 'none'; // Hide thank you message after 5 seconds
+      }, 5000);
+    }, 1000); // Simulated delay of 1 second
+  });
+</script>
+
+</body>
+</html>
